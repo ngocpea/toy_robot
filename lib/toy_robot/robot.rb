@@ -46,6 +46,13 @@ module ToyRobot
 
     # private method to consolidate turn_left and turn_right method
 
+    def report
+      {
+        north: north,
+        east: east,
+        direction: direction
+      }
+    end
 
   end
 end
