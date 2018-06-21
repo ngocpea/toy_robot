@@ -1,4 +1,5 @@
 require 'pry'
+
 module ToyRobot
   class Robot
     DIRECTIONS = [ 'NORTH', 'EAST', 'SOUTH', 'WEST' ]
@@ -43,8 +44,6 @@ module ToyRobot
       index = DIRECTIONS.index(@direction)  
       @direction = DIRECTIONS.rotate(1)[index]
     end
-
-    # private method to consolidate turn_left and turn_right method
 
     def report
       {
