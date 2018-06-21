@@ -1,7 +1,5 @@
 require 'pry'
 
-require_relative 'robot'
-
 module ToyRobot
 attr_reader :robot
   class Table
@@ -11,16 +9,17 @@ attr_reader :robot
     end
     
     def valid_location?(east, north)
-      (0...@width).cover?(east) &&
-      (0...@length).cover?(north)
+      east >= 0 && east < @width &&
+      north >= 0 && north < @length
     end
- 
+    
     def place(east, north, facing)
-      return unless @table.valid_location?(east, north)
-
-      @robot = Robot.new(east, north, facing)
-    end
-
-binding.pry
+     # return unless @table.valid_location?(east, north
+      if valid_location?(east,north)
+      robot = Robot.new(east, north, facing)
+      end
+    end 
   end
+
 end
+

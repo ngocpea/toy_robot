@@ -1,4 +1,5 @@
 require 'pry'
+require_relative 'table'
 
 module ToyRobot
   class Robot
@@ -52,7 +53,7 @@ module ToyRobot
         direction: direction
       }
     end
-
+binding.pry
   end
 end
 
